@@ -1,0 +1,40 @@
+<%- include("partials/header.ejs") %>
+
+<div class="midbody">
+    <div class="postbox">
+        <form action="/create" method="POST">
+            <input type="text" class="tweetinput" name="tweet" placeholder="Create your post here!">
+            <input type="submit" value="Post!">
+        </form>
+    </div>
+
+    <div class="viewposts">
+        <h1 style="text-align: center;">Posts</h1>
+        <% if (locals.tweets && tweets.length > 0) { %>
+            <% tweets.forEach(function(tweet, index) { %>
+                <div class="post" id="post<%= (tweets.length - index) %>" style="position: relative;">
+                    <p><%= tweet %></p>
+
+                    <button class="dropdown-toggle" onclick="toggleDropdown('<%= tweets.length - index %>')">⋮</button>
+
+                    <div class="dropdown-menu" id="dropdown-<%= tweets.length - index %>">
+                        <ul>
+                            <li><a href="/edit/<%= tweets.length - index %>">Edit</a></li>
+                            <li>
+                                <form action="/delete/<%= tweets.length - index %>" method="POST" onsubmit="return confirm('Are you sure?');">
+                                    <button type="submit">Delete</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <h1>No posts yet, Create your first post now!</h1>
+        <% } %>
+    </div>
+</div>
+
+
+
+<%- include("partials/footer.ejs") %>

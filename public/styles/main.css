@@ -1,0 +1,87 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-topss {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tweetinput {
+    height: 50px;
+    width: 200px;
+}
+
+.midbody {
+    width: 70%;
+}
+
+.post {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.postbox {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.titlenav {
+    padding: 30px;
+    position: static;
+    top: 0;
+    width: 100%;
+}
+
+.dropdown-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-menu ul li:hover {
+    background-color: #f0f0f0;
+}

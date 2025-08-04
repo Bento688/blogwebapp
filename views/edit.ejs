@@ -1,0 +1,9 @@
+<%- include("partials/header.ejs") %>
+
+<h2>Edit Tweet</h2>
+<form action="/edit/<%= id %>" method="POST">
+    <textarea name="tweet"><%= tweet %></textarea>
+    <button type="submit">Save</button>
+</form>
+
+<%- include("partials/footer.ejs") %>
