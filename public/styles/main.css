@@ -4,6 +4,13 @@ footer {
     width: 100%;
 }
 
+html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(241, 241, 255);
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -12,9 +19,30 @@ main {
     width: 100%;
 }
 
+.posthead {
+    margin-bottom: 4rem;
+}
+
+.postbox {
+    margin-bottom: 4rem;
+}
+
+.midbody {
+    margin: 10rem;
+}
+
 .navbar-topss {
     display: flex;
     justify-content: space-evenly;
+}
+
+.editejshead {
+    margin: 5rem;
+}
+
+.editcontainer {
+    display: flex;
+    align-items: center;
 }
 
 .tweetinput {

@@ -9,7 +9,7 @@
     </div>
 
     <div class="viewposts">
-        <h1 style="text-align: center;">Posts</h1>
+        <h1 class="posthead" style="text-align: center;">Posts</h1>
         <% if (locals.tweets && tweets.length > 0) { %>
             <% tweets.forEach(function(tweet, index) { %>
                 <div class="post" id="post<%= (tweets.length - index) %>" style="position: relative;">
