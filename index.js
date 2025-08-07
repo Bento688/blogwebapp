@@ -19,8 +19,16 @@ app.get("/", (req, res) => {
 //What happens when user presses the create button
 app.post("/create", (req, res) => {
     const newTweet = req.body.tweet;
-    tweets.unshift(newTweet);
-    res.redirect("/");
+    if (newTweet.length === 0) {
+        let empty = true;
+        res.render("index.ejs", {
+            empty: empty,
+            tweets: tweets
+        });
+    } else {
+        tweets.unshift(newTweet);
+        res.redirect("/");
+    } 
 });
 
 //What happens when user wants to edit the posts (relative to post id)

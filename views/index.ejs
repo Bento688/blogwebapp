@@ -8,8 +8,11 @@
             </div>
             <div class="postbox__input-item2">
                 <input class="postbox__submit" type="submit" value="Post!">
-            </div>          
+            </div>           
         </form>
+        <% if (locals.empty && empty === true) { %>
+            <h3 class="postbox__empty">Your input cannot be empty! ❌</h3>
+        <% } %>        
     </div>
 </section>
 
@@ -40,9 +43,5 @@
         <% } %>
     </div>
 </section>
-
-
-
-
 
 <%- include("partials/footer.ejs") %>

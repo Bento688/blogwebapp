@@ -25,20 +25,31 @@ button {
 /* Postbox section */
 
 .postbox {
+    display: flex;
+    justify-content: center;
     padding: 100px 50px 50px 50px;
+}
+
+.postbox__input {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .postbox__input-container {
     display: flex;
+    width: 100%;
     gap: 40px;
-    justify-content: center;
+    justify-content: flex-start;
     height: 6rem;
 }
 
 .postbox__input-item1 {
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 80%;
 }
 
 .postbox__input-item2 {
@@ -69,6 +80,11 @@ button {
 
 .postbox__submit:hover {
     background-color: #313131;
+}
+
+.postbox__empty {
+    padding: 0.5rem 1rem 1.5rem 0;
+    width: 50%;
 }
 
 /* Viewposts section */
@@ -120,7 +136,8 @@ button {
     top: 35px;
     right: 10px;
     background-color: white;
-    border: 1px solid #ccc;
+    border: 1px solid #5d5d5d;
+    border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     z-index: 100;
 }
@@ -181,6 +198,7 @@ button {
 .editpage__input {
     padding: 10px 20px;
     font-size: 1.5rem;
+    border-radius: 8px;
     width: 90%;
     height: 30px;
     resize: none;
