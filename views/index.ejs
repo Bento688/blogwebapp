@@ -1,18 +1,27 @@
 <%- include("partials/header.ejs") %>
 
-<div class="midbody">
-    <div class="postbox">
-        <form action="/create" method="POST">
-            <input type="text" class="tweetinput" name="tweet" placeholder="Create your post here!">
-            <input type="submit" value="Post!">
+
+
+<section class="postbox">
+    <div class="postbox__input">
+        <form class="postbox__input-container" action="/create" method="POST">
+            <div class="postbox__input-item1">
+                <input class="postbox__tweetinput" type="text" name="tweet" placeholder="Write your post here!">
+            </div>
+            <div class="postbox__input-item2">
+                <input class="postbox__submit" type="submit" value="Post!">
+            </div>          
         </form>
     </div>
+</section>
 
-    <div class="viewposts">
-        <h1 class="posthead" style="text-align: center;">Posts</h1>
+
+<section class="viewposts">
+    <div class="viewposts__container">
+        <h1 class="viewposts__title" style="text-align: center;">Posts</h1>
         <% if (locals.tweets && tweets.length > 0) { %>
             <% tweets.forEach(function(tweet, index) { %>
-                <div class="post" id="post<%= (tweets.length - index) %>" style="position: relative;">
+                <div class="viewposts__post" id="post<%= (tweets.length - index) %>" style="position: relative;">
                     <p><%= tweet %></p>
 
                     <button class="dropdown-toggle" onclick="toggleDropdown('<%= tweets.length - index %>')">⋮</button>
@@ -33,7 +42,9 @@
             <h1>No posts yet, Create your first post now!</h1>
         <% } %>
     </div>
-</div>
+</section>
+
+
 
 
 

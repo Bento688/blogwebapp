@@ -1,78 +1,71 @@
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+* {
+    font-family: "Google Sans Code", monospace;
+    padding: 0;
+    margin: 0;
 }
 
-html {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgb(241, 241, 255);
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.posthead {
-    margin-bottom: 4rem;
+button {
+    background: none;
+    border: none;
 }
 
 .postbox {
-    margin-bottom: 4rem;
+    padding: 100px 50px 50px 50px;
 }
 
-.midbody {
-    margin: 10rem;
-}
-
-.navbar-topss {
+.postbox__input-container {
     display: flex;
-    justify-content: space-evenly;
+    gap: 40px;
+    justify-content: center;
+    height: 6rem;
 }
 
-.editejshead {
-    margin: 5rem;
-}
-
-.editcontainer {
+.postbox__input-item1 {
     display: flex;
     align-items: center;
+    width: 50%;
 }
 
-.tweetinput {
-    height: 50px;
-    width: 200px;
-}
-
-.midbody {
-    width: 70%;
-}
-
-.post {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-    position: relative;
-}
-
-.postbox {
+.postbox__input-item2 {
     display: flex;
-    justify-content: center;
-    padding: 30px;
+    align-items: center;
+    width: 10%;
 }
 
-.titlenav {
-    padding: 30px;
-    position: static;
-    top: 0;
+.postbox__tweetinput {
+    font-size: 1.5rem;
+    padding: 12px;
     width: 100%;
 }
+
+.postbox__submit {
+    font-size: 1.5rem;
+    padding: 5px 20px;
+    background: none;
+    border: none;
+    background-color: #5d5d5d;
+    color: #eee;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.postbox__submit:hover {
+    background-color: #313131;
+}
+
+.viewposts {
+    padding: 100px;
+}
+
+.footer {
+    padding: 20px;
+}
+
+
+
+
+/* ============================== */
+
 
 .dropdown-toggle {
     position: absolute;
