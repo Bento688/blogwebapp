@@ -10,7 +10,7 @@ function toggleDropdown(id) {
 
 // Optional: close dropdown when clicking outside
 document.addEventListener('click', function(e) {
-    if (!e.target.closest('.post')) {
+    if (!e.target.closest('.viewposts__post')) {
         document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('show'));
     }
 });

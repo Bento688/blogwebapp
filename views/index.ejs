@@ -1,7 +1,5 @@
 <%- include("partials/header.ejs") %>
 
-
-
 <section class="postbox">
     <div class="postbox__input">
         <form class="postbox__input-container" action="/create" method="POST">
@@ -15,7 +13,6 @@
     </div>
 </section>
 
-
 <section class="viewposts">
     <div class="viewposts__container">
         <h1 class="viewposts__title" style="text-align: center;">Posts</h1>
@@ -23,9 +20,7 @@
             <% tweets.forEach(function(tweet, index) { %>
                 <div class="viewposts__post" id="post<%= (tweets.length - index) %>" style="position: relative;">
                     <p><%= tweet %></p>
-
                     <button class="dropdown-toggle" onclick="toggleDropdown('<%= tweets.length - index %>')">⋮</button>
-
                     <div class="dropdown-menu" id="dropdown-<%= tweets.length - index %>">
                         <ul>
                             <li><a href="/edit/<%= tweets.length - index %>">Edit</a></li>
@@ -39,7 +34,7 @@
                 </div>
             <% }); %>
         <% } else { %>
-            <h1>No posts yet, Create your first post now!</h1>
+            <h1 class="viewposts__noposts">No posts yet, Create your first post now!</h1>
         <% } %>
     </div>
 </section>
