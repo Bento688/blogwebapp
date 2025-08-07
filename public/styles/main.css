@@ -1,3 +1,5 @@
+/* Universal */
+
 * {
     font-family: "Google Sans Code", monospace;
     padding: 0;
@@ -19,6 +21,8 @@ button {
     background: none;
     border: none;
 }
+
+/* Postbox section */
 
 .postbox {
     padding: 100px 50px 50px 50px;
@@ -67,6 +71,8 @@ button {
     background-color: #313131;
 }
 
+/* Viewposts section */
+
 .viewposts {
     padding: 30px 100px 100px 100px;
     flex: 1;
@@ -89,16 +95,7 @@ button {
     padding: 25px;
 }
 
-.footer {
-    padding: 20px;
-    text-align: center;
-}
-
-
-
-
-/* ============================== */
-
+/* Viewposts dropdown */
 
 .dropdown-toggle {
     padding: 10px 13px;
@@ -139,10 +136,77 @@ button {
 }
 
 .dropdown-menu ul li {
+    color: #313131;
     padding: 10px;
     cursor: pointer;
+    font-size: 1rem;
+    transition: 0.2s;
 }
 
 .dropdown-menu ul li:hover {
     background-color: #f0f0f0;
 }
+
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.dropdown-menu ul li button {
+    font-size: 1rem;
+}
+
+/* Edit page */
+
+.editpage__header {
+    padding: 100px 100px 20px 100px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.editpage__editor {
+    padding: 100px;
+}
+
+.editpage__form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editpage__form-item1 {
+    width: 50%;
+}
+
+.editpage__input {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    width: 90%;
+    height: 30px;
+    resize: none;
+}
+
+.editpage__form-item2 button {
+    padding: 5px 20px;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: #5d5d5d;
+    color: #eee;
+    transition: 0.3s;
+}
+.editpage__form-item2 button:hover {
+    background-color: #313131;
+}
+
+
+
+
+/* Footer section */
+
+.footer {
+    padding: 20px;
+    text-align: center;
+}
+
+

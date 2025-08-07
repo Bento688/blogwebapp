@@ -23,7 +23,9 @@
                     <button class="dropdown-toggle" onclick="toggleDropdown('<%= tweets.length - index %>')">⋮</button>
                     <div class="dropdown-menu" id="dropdown-<%= tweets.length - index %>">
                         <ul>
-                            <li><a href="/edit/<%= tweets.length - index %>">Edit</a></li>
+                            <li>
+                                <a href="/edit/<%= tweets.length - index %>">Edit</a>
+                            </li>
                             <li>
                                 <form action="/delete/<%= tweets.length - index %>" method="POST" onsubmit="return confirm('Are you sure?');">
                                     <button type="submit">Delete</button>
@@ -34,7 +36,7 @@
                 </div>
             <% }); %>
         <% } else { %>
-            <h1 class="viewposts__noposts">No posts yet, Create your first post now!</h1>
+            <h1 class="viewposts__noposts">No posts yet, Create your first post now! 🥳</h1>
         <% } %>
     </div>
 </section>
